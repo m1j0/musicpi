@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titles</title>
+</head>
+<body>
+{% load staticfiles %}
+<link rel="stylesheet" href={% static "style.css" %}>
+<h1>Titles</h1>
+<ul>
+{% for title in titles.title_set.all %}
+	<li>{{title.name}}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
